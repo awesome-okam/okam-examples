@@ -1,0 +1,74 @@
+{
+  "private": true,
+  "name": "okam-template",
+  "version": "0.1.0",
+  "description": "<project description>",
+  "main": "index.js",
+  "scripts": {
+    "lint": "fecs ./src --reporter=baidu --rule --type=vue,js",
+    "prod": "node scripts/build.js --clean",
+    "dev": "cross-env NODE_ENV=dev node  scripts/build.js --watch",
+    "dev:clean": "cross-env NODE_ENV=dev node  scripts/build.js --watch --clean",
+    "dev:server": "cross-env NODE_ENV=dev node scripts/build.js --watch --server",
+    "dev:wx": "npm run dev -- --type wx",
+    "dev:wx:server": "npm run dev:server -- --type wx",
+    "dev:wx:clean": "npm run dev:clean -- --type wx",
+    "prod:wx": "npm run prod -- --type wx",
+    "dev:ant": "npm run dev -- --type ant",
+    "dev:ant:server": "npm run dev:server -- --type ant",
+    "dev:ant:clean": "npm run dev:clean -- --type ant",
+    "prod:ant": "npm run prod -- --type ant",
+    "dev:tt": "npm run dev -- --type tt",
+    "dev:tt:server": "npm run dev:server -- --type tt",
+    "dev:tt:clean": "npm run dev:clean -- --type tt",
+    "prod:tt": "npm run prod -- --type tt",
+    "dev:quick": "npm run dev -- --type quick",
+    "dev:quick:server": "npm run dev:server -- --type quick",
+    "dev:quick:clean": "npm run dev:clean -- --type quick",
+    "prod:quick": "npm run prod -- --type quick"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{js,vue}": [
+        "fecs --reporter=baidu --rule --type=vue,js"
+      ]
+    },
+    "ignore": [
+      "dist/**/*"
+    ]
+  },
+  "author": "<author>",
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.1.5",
+    "autoresponse": "^0.3.0",
+    "chalk": "^2.4.1",
+    "connect": "^3.6.6",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.3",
+    "fecs": "^1.6.2",
+    "husky": "^1.0.0",
+    "lint-staged": "^7.3.0",
+    "okam-plugin-tinyimg": "^0.1.0",
+    "postcss": "^7.0.3",
+    "postcss-url": "^8.0.0",
+    "promise-polyfill": "^8.1.0",
+    "rider": "^2.0.0",
+    "rimraf": "^2.6.2",
+    "stylus": "^0.54.5"
+  },
+  "engine": {
+    "node": ">= 8"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.2.0",
+    "@babel/runtime-corejs2": "^7.2.0",
+    "redux": "^4.0.1"
+  }
+}
