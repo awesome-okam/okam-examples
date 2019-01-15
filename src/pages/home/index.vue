@@ -221,7 +221,6 @@ export default {
 
 .list-group-title
     padding: 10px 5px 10px
-    position: relative
     display: flex
     align-items: center
 
