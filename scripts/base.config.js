@@ -20,6 +20,7 @@ module.exports = {
     component: {
         extname: 'vue',
         template: {
+            useVuePrefix: true,
             transformTags: {
                 div: 'view',
                 p: 'view',
@@ -32,7 +33,8 @@ module.exports = {
         }
     },
     framework: [
-        'ref', 'broadcast', 'data', 'watch', 'filter', 'behavior'
+        'ref', 'broadcast', 'data', 'watch',
+        'filter', 'behavior', 'model', 'vuex'
     ],
     designWidth: 375,
     processors: {
@@ -70,7 +72,7 @@ module.exports = {
                 match: '*.js',
                 processors: [
                     ['replacement', {
-                        'process.env.NODE_ENV': '"production"'
+                        'process.env.NODE_ENV': '"development"'
                     }]
                 ]
             },

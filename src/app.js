@@ -7,10 +7,13 @@
 
 /* eslint-disable fecs-camelcase */
 
+import store from './common/vuex/store';
+
 export default {
     config: {
         pages: [
-            'pages/home/index'
+            'pages/home/index',
+            'pages/vuex/index'
         ],
 
         window: {
@@ -32,6 +35,8 @@ export default {
             icon: '/common/img/okam.png'
         }
     },
+
+    $store: () => store,
 
     onLaunch() {
         console.log('show onLaunch...');

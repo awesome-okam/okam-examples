@@ -120,8 +120,8 @@ export default {
                         path: 'data/watch'
                     },
                     {
-                        subName: 'redux状态管理',
-                        path: 'todos/todoList'
+                        subName: 'Vuex状态管理',
+                        path: 'vuex/index'
                     },
                     {
                         subName: 'v-model属性',

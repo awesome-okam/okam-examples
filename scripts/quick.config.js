@@ -15,7 +15,7 @@ const merge = require('okam-build').merge;
  * @type {Array.<string>}
  */
 const overridePropertySelectors = [
-    'component.template',
+    'component.template.transformTags',
     'processors.postcss'
 ];
 
